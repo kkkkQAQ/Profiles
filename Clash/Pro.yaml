@@ -81,108 +81,205 @@ cfw-bypass:
   - 172.30.*
   - 172.31.*
   - 192.168.*
-  - <local>
+  - 
 cfw-latency-timeout: 5000
-
-# 代理节点
 Proxy:
-# 更多协议配置示例：https://github.com/Dreamacro/clash/blob/master/README.md
-
-# Shadowsocks 支持的加密方式:
-#   aes-128-gcm aes-192-gcm aes-256-gcm
-#   aes-128-cfb aes-192-cfb aes-256-cfb
-#   aes-128-ctr aes-192-ctr aes-256-ctr
-#   rc4-md5 chacha20 chacha20-ietf xchacha20
-#   chacha20-ietf-poly1305 xchacha20-ietf-poly1305
-
-# Shadowsocks
-- name: "1"
-  type: ss
-  server: 1.2.4.8
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  # udp: true
-
-# Shadowsocks + simple-obfs
-- name: "2"
-  type: ss
-  server: 1.2.4.8
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  plugin: obfs
-  plugin-opts:
-    mode: tls # or http
-    # host: bing.com
-
-# Shadowsocks + v2ray-plugin
-- name: "3"
-  type: ss
-  server: 1.2.4.8
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: "password"
-  plugin: v2ray-plugin
-  plugin-opts:
-    mode: websocket # no QUIC now
-    # tls: true # wss
-    # skip-cert-verify: true
-    # host: bing.com
-    # path: "/"
-    # mux: true
-    # headers:
-    #   custom: value
-
-# VMess
-- name: "4"
+- name: 俄罗斯a
   type: vmess
-  server: v2ray.cool
-  port: 443
-  uuid: a3482e88-686a-4a58-8126-99c9df64b7bf
-  alterId: 64
+  server: 45.8.159.85
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
   cipher: auto
-  # udp: true
-  # tls: true
-  # skip-cert-verify: true
-  # network: ws
-  # ws-path: /path
-  # ws-headers:
-  #   Host: v2ray.com
-
-# 其他协议如 Socks5、HTTP、Snell 示例如下
-
-# socks5
-# - name: "socks"
-#   type: socks5
-#   server: server
-#   port: 443
-#   # username: username
-#   # password: password
-#   # tls: true
-#   # skip-cert-verify: true
-#   # udp: true
-
-# http
-# - name: "http"
-#   type: http
-#   server: server
-#   port: 443
-#   # username: username
-#   # password: password
-#   # tls: true # https
-#   # skip-cert-verify: true
-
-# snell
-# - name: "snell"
-#   type: snell
-#   server: server
-#   port: 44046
-#   psk: yourpsk
-#   # obfs-opts:
-#     # mode: http # or tls
-#     # host: bing.com
-
+- name: 俄罗斯b
+  type: vmess
+  server: 185.22.153.158
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 俄罗斯d
+  type: vmess
+  server: 45.144.2.110
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 俄罗斯e
+  type: vmess
+  server: 45.89.230.55
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 俄罗斯f
+  type: vmess
+  server: 45.130.147.14
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 俄罗斯g
+  type: vmess
+  server: 194.156.120.86
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 加拿大a
+  type: vmess
+  server: 99.79.191.250
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 印度a
+  type: vmess
+  server: 13.126.163.24
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 悉尼a
+  type: vmess
+  server: 13.211.171.230
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 新加坡a
+  type: vmess
+  server: 54.169.135.140
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 新加坡b
+  type: vmess
+  server: 54.255.216.117
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 新加坡c
+  type: vmess
+  server: 3.1.100.138
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 新加坡d
+  type: vmess
+  server: 157.230.42.69
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 新加坡p
+  type: vmess
+  server: 54.179.151.75
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 日本a
+  type: vmess
+  server: 13.231.212.13
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 日本d
+  type: vmess
+  server: 139.162.65.222
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 日本e
+  type: vmess
+  server: 52.192.10.143
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 日本f
+  type: vmess
+  server: 54.250.206.58
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 日本p
+  type: vmess
+  server: 3.113.7.189
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 日本q
+  type: vmess
+  server: 54.64.71.55
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 美国a
+  type: vmess
+  server: 104.248.216.130
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 美国b
+  type: vmess
+  server: 155.94.146.40
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 美国c
+  type: vmess
+  server: 155.94.146.41
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 美国e
+  type: vmess
+  server: 34.216.68.174
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 美国f
+  type: vmess
+  server: 34.221.127.72
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 美国g
+  type: vmess
+  server: 74.207.251.24
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 韩国a
+  type: vmess
+  server: 52.78.151.191
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
+- name: 韩国b
+  type: vmess
+  server: 13.124.167.16
+  port: 458
+  uuid: d4990add-8cc2-31ad-8fb5-f1cb030262a4
+  alterId: 0
+  cipher: auto
 # 代理组策略
 Proxy Group:
 # 注意，不同于 Surge，后面要用到的策略组要放到前面
@@ -198,74 +295,84 @@ Proxy Group:
   url: 'http://www.gstatic.com/generate_204'
   interval: 300
 
-# fallback 通过指定的 URL 测试并选择可用的节点，当 1 故障不可用时自动切换到 2 以此类推
-# - name: "Fallback"
-#   type: fallback
-#   proxies:
-#     - "1"
-#     - "2"
-#     - "3"
-#     - "4"
-#   url: 'http://www.gstatic.com/generate_204'
-#   interval: 300
+Proxy Group:
 
-# load-balance: 负载均衡
-# - name: "LoadBalance"
-#   type: load-balance
-#   proxies:
-#     - "1"
-#     - "2"
-#     - "3"
-#     - "4"
-#   url: 'http://www.gstatic.com/generate_204'
-#   interval: 300
-
-# 代理节点选择
-- name: "PROXY"
-  type: select
+- name: 安慕希
+  type: load-balance
   proxies:
-    - "UrlTest"
-    - "1"
-    - "2"
-    - "3"
-    - "4"
-# 白名单模式 PROXY，黑名单模式 DIRECT
-- name: "Final"
-  type: select
+    - DIRECT
+    - REJECT
+    - 新加坡a
+    - 新加坡b
+    - 新加坡c
+    - 新加坡d
+    - 新加坡p
+    - 日本a
+    - 日本d
+    - 日本e
+    - 日本f
+    - 日本p
+    - 日本q
+    - 美国a
+    - 美国b
+    - 美国c
+    - 美国e
+    - 美国f
+    - 美国g
+    - 韩国a
+    - 韩国b
+  url: https://i.ytimg.com/generate_204
+  interval: 300
+- name: 安慕希
+  type: load-balance
   proxies:
-    - "PROXY"
-    - "DIRECT"
-# Apple 服务代理
-- name: "Apple"
-  type: select
+    - 新加坡a
+    - 新加坡b
+    - 新加坡c
+    - 新加坡d
+    - 新加坡p
+    - 日本a
+    - 日本d
+    - 日本e
+    - 日本f
+    - 日本p
+    - 日本q
+  url: https://i.ytimg.com/generate_204
+  interval: 300
+- name: 
+  type: load-balance
   proxies:
-    - "DIRECT"
-    - "PROXY"
-# 国际流媒体服务
-- name: "GlobalMedia"
-  type: select
+    - 新加坡a
+    - 新加坡b
+    - 新加坡c
+    - 新加坡d
+    - 新加坡p
+    - 日本a
+    - 日本d
+    - 日本e
+    - 日本f
+    - 日本p
+    - 日本q
+  url: http://www.gstatic.com/generate_204
+  interval: 300
+- name: 负载均衡
+  type: load-balance
   proxies:
-    - "PROXY"
-    - "1"
-    - "2"
-    - "3"
-    - "4"
-# 大陆流媒体面向港澳台限定服务
-- name: "HKMTMedia"
-  type: select
-  proxies:
-    - "DIRECT"
-    - "1"
-    - "2"
-    - "3"
-    - "4"
-# 运营商及声名狼藉网站劫持
-- name: "Hijacking"
-  type: select
-  proxies:
-    - "REJECT"
-    - "DIRECT"
-
+    - 新加坡a
+    - 新加坡b
+    - 新加坡c
+    - 新加坡d
+    - 新加坡p
+    - 日本a
+    - 日本d
+    - 日本e
+    - 日本f
+    - 日本p
+    - 日本q
+    - 韩国a
+    - 韩国b
+  url: https://i.ytimg.com/generate_204
+  interval: 300
 # 规则
 Rule:
 # Unbreak
